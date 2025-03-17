@@ -1,38 +1,7 @@
-.App {
-  text-align: center;
+.app {
+  background-image: url('https://th.bing.com/th/id/R.f8b76ec99a23b4fd3fc3017f75f34c44?rik=EoQ5UOmGM%2bZ1ug&riu=http%3a%2f%2fprod-upp-image-read.ft.com%2f054d65c6-62bc-11e3-bba5-00144feabdc0&ehk=ljuVNelfxTNKexypgJXGpPOx41V07wOX71st2Fb9JRQ%3d&risl=&pid=ImgRaw&r=0');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav {
+  background-color: rgb(233, 212, 143);
 }
