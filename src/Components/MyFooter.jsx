@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-4 mt-5">
+    <footer className=" py-4 mt-5" style={{backgroundColor: 'rgb(253, 236, 180)'}}>
       <Container>
         <Row>
           <Col md={4} className="text-center text-md-start">
@@ -11,11 +11,11 @@ const Footer = () => {
             <p>Email: info@example.com</p>
             <p>Telefono: +39 123 456 789</p>
           </Col>
-          <Col md={4} className="text-center">
+          <Col md={4} className="text-center ">
             <h5>Seguici</h5>
-            <a href="#" className="text-light mx-2">Facebook</a>
-            <a href="#" className="text-light mx-2">Twitter</a>
-            <a href="#" className="text-light mx-2">Instagram</a>
+            <a href="#" className=" mx-2">Facebook</a>
+            <a href="#" className=" mx-2">Twitter</a>
+            <a href="#" className="mx-2">Instagram</a>
           </Col>
           <Col md={4} className="text-center text-md-end">
             <h5>© {new Date().getFullYear()} My Website</h5>
