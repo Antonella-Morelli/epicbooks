@@ -64,7 +64,6 @@
 
 //   export default AllTheBooks
 
-
 import React, { useState } from 'react'
 import { Col, Row, Container, InputGroup, Form } from 'react-bootstrap'
 import BookSingle from './BookSingle'
@@ -72,7 +71,8 @@ import fantasyBooks from '../Generi/fantasy.json'
 
 function AllTheBooks() {
     const [searchTerm, setSearchTerm] = useState('')
-   
+    const [selectedBook, setSelectedBook] = useState(null)
+
     function searchBooks(event) {
         setSearchTerm(event.target.value.toLowerCase())
     }
@@ -83,15 +83,17 @@ function AllTheBooks() {
 
     return (
         <Container>
-            <h3 className="my-4 mx-5 text-center fw-bold" style={{ backgroundColor: 'rgb(233, 212, 143)', color: 'rgb(77, 63, 5)', padding: '0.4em', borderRadius: '50px' }}>
+            <h3 className="my-4 mx-5 text-center fw-bold" style={{ backgroundColor: 'rgb(235, 217, 160)', color: 'rgb(77, 63, 5)', padding: '0.4em', borderRadius: '50px' }}>
                 Libri Fantasy
             </h3>
 
-            <InputGroup className="float-center mb-3" style={{ maxWidth: '300px' }}>
+            <InputGroup className="float-center mb-3" style={{ maxWidth: '300px'  }}>
                 <Form.Control
                     type="text"
                     onChange={searchBooks}
                     placeholder="Cerca un libro qui.."
+                    style={{ backgroundColor: 'rgb(241, 226, 174)'}}
+                    
                 />
             </InputGroup>
 
@@ -99,7 +101,11 @@ function AllTheBooks() {
                 {filteredBooks.length > 0 ? (
                     filteredBooks.map((book) => (
                         <Col key={book.asin} className="d-flex justify-content-center">
-                            <BookSingle book={book} />
+                            <BookSingle 
+                                book={book} 
+                                isSelected={selectedBook === book.asin} 
+                                setSelectedBook={setSelectedBook} 
+                            />
                         </Col>
                     ))
                 ) : (
