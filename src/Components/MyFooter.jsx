@@ -13,9 +13,9 @@ const Footer = () => {
           </Col>
           <Col md={4} className="text-center ">
             <h5>Seguici</h5>
-            <a href="#" className=" mx-2">Facebook</a>
-            <a href="#" className=" mx-2">Twitter</a>
-            <a href="#" className="mx-2">Instagram</a>
+            <a className=" mx-2">Facebook</a>
+            <a className=" mx-2">Twitter</a>
+            <a className="mx-2">Instagram</a>
           </Col>
           <Col md={4} className="text-center text-md-end">
             <h5>© {new Date().getFullYear()} My Website</h5>

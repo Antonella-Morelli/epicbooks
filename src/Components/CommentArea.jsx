@@ -10,6 +10,14 @@ function CommentArea({ asin }) {
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    
+    if (!asin) {
+      setComments([])
+      setLoading(false)
+      setError(null)
+      return
+    }
+    
     const fetchComments = async () => {
       try {
         const url = `https://striveschool-api.herokuapp.com/api/books/${asin}/comments/`
@@ -18,7 +26,6 @@ function CommentArea({ asin }) {
             Authorization: `Bearer ${token}`,
           },
         })
-        if (!response.ok) throw new Error('Errore nel recupero dei commenti')
 
         const data = await response.json()
         setComments(data)
@@ -30,13 +37,14 @@ function CommentArea({ asin }) {
     }
 
     if (asin) fetchComments()
-    else setError('ASIN non valido')
   }, [asin])
+
+  
 
   return (
     <div className="comment-area" style={{ marginTop: '10px', padding: '10px', border: '1px solid gray', borderRadius: '10px' , backgroundColor: 'rgb(253, 236, 180)' }}>
       <h5>Commenti</h5>
-      {loading && <p>Caricamento...</p>}
+      {loading && <p>Seleziona un libro per vedere o aggiungere commenti</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {!loading && <CommentList comments={comments} />}
       <AddComment asin={asin} setComments={setComments} /> 

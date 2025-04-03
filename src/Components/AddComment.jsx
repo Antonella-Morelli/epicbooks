@@ -19,7 +19,7 @@ function AddComment({ asin, setComments }) {
     }
 
     try {
-      let response = await fetch('https://striveschool-api.herokuapp.com/api/comments/', {
+       await fetch('https://striveschool-api.herokuapp.com/api/comments/', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
