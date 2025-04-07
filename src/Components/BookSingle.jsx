@@ -9,6 +9,7 @@ function BookSingle({ book, isSelected }) {
 
   return (
     <Card
+      data-testid="book-card"
       className="mb-3"
       style={{
         maxWidth: '18rem',
@@ -21,15 +22,15 @@ function BookSingle({ book, isSelected }) {
       <Card.Img
         variant="top"
         src={book.img}
-        style={{ height: '200px', objectFit: 'cover', borderRadius: '30px' }}
+        style={{ height: '200px', objectFit: 'cover', borderRadius: '30px' , padding: '0.5em'}}
       />
-      <Card.Body>
+      <Card.Body className='d-flex flex-column'>
         <Card.Title>{book.title}</Card.Title>
         <Card.Text style={{ color: 'green', fontWeight: 'bold' }}>${book.price}</Card.Text>
         <Button variant="outline-dark" size="sm">
           {isSelected ? 'Selezionato' : 'Seleziona'}
         </Button>
-        <Button variant="outline-dark" size="sm" className='mx-3' onClick={() => navigate(`/book/${book.asin}`)}>
+        <Button variant="outline-dark" size="sm" className=' d-block , my-2' onClick={() => navigate(`/book/${book.asin}`)}>
           Dettagli
         </Button>
       </Card.Body>

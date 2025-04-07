@@ -1,6 +1,6 @@
-import Alert from 'react-bootstrap/Alert';
+import Alert from 'react-bootstrap/Alert'
 
-function BasicExample() {
+function Welcome() {
   return (
     <>
       {[
@@ -14,4 +14,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default Welcome

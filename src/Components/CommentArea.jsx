@@ -42,8 +42,7 @@ function CommentArea({ asin }) {
   
 
   return (
-    <div className="comment-area" style={{ marginTop: '10px', padding: '10px', border: '1px solid gray', borderRadius: '10px' , backgroundColor: 'rgb(253, 236, 180)' }}>
-      <h5>Commenti</h5>
+    <div data-testid="comment-area" className="comment-area" style={{ marginTop: '10px', padding: '10px', border: '1px solid gray', borderRadius: '10px' , backgroundColor: 'rgb(253, 236, 180)' }}>
       {loading && <p>Seleziona un libro per vedere o aggiungere commenti</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {!loading && <CommentList comments={comments} />}

@@ -45,8 +45,8 @@ function AddComment({ asin, setComments }) {
   }
 
   return (
-    <div style={{ marginBottom: '10px', padding: '10px', border: '1px solid black', borderRadius: '10px', backgroundColor :'rgb(253, 236, 180)' }}>
-      <h6>Aggiungi un commento</h6>
+    <div style={{ margin: '20px', padding: '0.1em', borderRadius: '10px', backgroundColor :'rgb(253, 236, 180)' }}>
+      <h5 className=' mb-3' >Aggiungi un commento</h5>
 
       <InputGroup className="mb-3" > 
         <Form.Control

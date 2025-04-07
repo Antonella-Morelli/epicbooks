@@ -4,7 +4,7 @@ import MyFooter from './Components/MyFooter'
 import Welcome from './Components/Welcome'
 import AllTheBooks from './Components/AllTheBooks'
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import NotFound from './Components/NotFound'
 import BookDetails from './Components/BookDetails'
 

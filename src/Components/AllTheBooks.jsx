@@ -17,7 +17,7 @@ function AllTheBooks({ searchTerm }) {
 
   return (
     <Container>
-      <h3
+      <h2
         className="my-4 mx-5 text-center fw-bold"
         style={{
           backgroundColor: 'rgb(235, 217, 160)',
@@ -27,10 +27,10 @@ function AllTheBooks({ searchTerm }) {
         }}
       >
         Libri Fantasy
-      </h3>
+      </h2>
 
-      <Row className="g-4">
-        <Col xs={12} sm={6} md={5} lg={4} className="overflow-auto">
+      <Row>
+        <Col xs={6} sm={6} md={5} lg={4} className="overflow-auto">
           {filteredBooks.length > 0 ? (
             filteredBooks.map((book) => (
               <div key={book.asin} onClick={() => handleBookClick(book.asin)}>
@@ -45,7 +45,7 @@ function AllTheBooks({ searchTerm }) {
           )}
         </Col>
 
-        <Col xs={12} sm={6} md={7} lg={8}>
+        <Col xs={6} sm={6} md={7} lg={8}>
           <CommentArea asin={selectedBook} />
         </Col>
       </Row>
